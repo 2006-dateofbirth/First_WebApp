@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First_WebApp</title>
+</head>
+<body>
+<h1>I am coming from HTML</h1>
+<p>{{ key1 }}</p>
+
+<form action="{% url 'result' %}" method="get">
+    {% csrf_token %}
+    <textarea name="article" cols="60" rows="10"></textarea>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

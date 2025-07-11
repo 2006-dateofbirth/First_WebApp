@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result Page</title>
+</head>
+<body>
+<h1>This passage has {{ word_count }} words</h1>
+
+<a href="{% url 'home' %}">CLICK HERE FOR HOME</a>
+<br><br>
+
+<p><strong>Original Text:</strong></p>
+<p>{{ article }}</p>
+<br><br>
+
+<h2>Total Word Frequency</h2>
+<table border="1">
+    <tr>
+        <th>Word</th>
+        <th>Count</th>
+    </tr>
+    {% for word, num in dict_words %}
+    <tr>
+        <td>{{ word }}</td>
+        <td>{{ num }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
